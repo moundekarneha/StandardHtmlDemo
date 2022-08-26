@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <h1>Hello this is standard html helper</h1>
+        @Html.ActionLink("Click me","About")
+        @Html.ActionLink("Click me to go next","Index","Student")
+        @Html.ActionLink("Click me to go next", "getData", new {name = "HeyJonh"})
+
+
+        @{ 
+            string name = "Kushik";
+        }
+
+        @Html.TextBox("txtbox1")<br />
+        @Html.TextBox("txtbox1","Hello jon")<br />
+        @Html.TextBox("txtbox1",@name)<br />
+        @Html.TextBox("txtbox1",@name,new{ id ="cust" })<br />
+        @Html.TextBox("txtbox1",@name,new{ id ="cust", @class="myclass"})<br />
+
+
+
+
+
+        @Html.CheckBox("check1")
+        @Html.CheckBox("check1",true)
+
+        @Html.Password("pass1")
+
+    </div>
+</body>
+</html>
